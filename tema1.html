@@ -12,10 +12,63 @@
         <li>
             <a href="index.html">Inicio</a>
         </li>
-        <li> <a href="tema1.html">Tema1</a> </li>
     </ul>
+
     <hr>
 
-    <p>  </p>
+    <h3>Definición y Propósito de las Operaciones de la E/S</h3>
+
+    <p>Las operaciones de entrada y salida (E/S) en los sistemas operativos son fundamentales para la comunicación entre el hardware y el software.</p>
+    <p>Ya que las operaciones de entrada y salida permiten que un sistema operativo interactúe con dispositivos periféricos como lo son los discos duros, impresoras, teclados, pantallas y redes. Estas operaciones son las que gestionan el flujo de datos entre la CPU, la memoria y los dispositivos externos, garantizando la eficiencia y estabilidad del sistema.​</p>
+
+    <hr>
+
+    <h3>Interfaz de la E/S y Tipos de Dispositivos</h2>
+    <p>El sistema operativo proporciona una interfaz de E/S que abstrae los detalles específicos del hardware, facilitando el acceso a los dispositivos mediante llamadas al sistema o conoxidas tambien como "system calls". Con esto los dispositivos se dividen en:</p>
+    <ul>
+        <li>Dispositivos de bloque: Los discos duros que manejan los datos en bloques fijos.</li>
+        <li>Dispositivos de carácter: Los teclados y ratones que transmiten los datos en flujo continuo.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Métodos de Comunicación con los Dispositivos</h3>
+
+    <p>Existen varios métodos para gestionar la comunicación entre la CPU y los dispositivos de E/S siendo:</p>
+    <ul>
+        <li>E/S Programada: La CPU espera activamente hasta que el dispositivo complete la operación.</li>
+        <li>E/S por Interrupciones: El dispositivo notifica a la CPU cuando está listo para intercambiar datos, haciendo que se reduzca el uso innecesario del procesador.</li>
+        <li>Acceso Directo a la Memoria (DMA): Un controlador especial es el que transfiere los datos directamente entre la memoria y el dispositivo, sin que haya intervención de la CPU.​</li>
+    </ul>
+
+    <hr>
+
+    <h3>Optimización del Rendimiento de la E/S</h3>
+
+    <p>Para poder mejorar la eficiencia de las operaciones de E/S, los sistemas operativos utilizan varias técnicas, siendo los más conocidos:</p>
+    <ul>
+        <li>Buffering: Usa la memoria intermedia para mejorar el rendimiento.</li>
+        <li>Spooling: Siendo un almacenamiento temporal de datos en el disco antes de enviarlos al dispositivo.</li>
+        <li>Caching: Uso de la memoria caché para acelerar el acceso a datos frecuentes.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Manejo de Errores y Protección en la E/S</h3>
+
+    <p>Los sistemas operativos deben manejar errores en las operaciones de E/S como lo son fallos en los discos o desconexiones de red.</p>
+    <p> Para ello el sistema debe usar métodos y estrategias</p>
+    <ul>
+        <li>Reintentos automáticos en el caso de errores transitorios.</li>
+        <li>Protección de la memoria para evitar que los procesos no autorizados accedan a dispositivos de E/S.</li>
+        <li>Sistemas de logging para registrar los fallos y depurarlos​</li>
+    </ul>
+
+    <hr>
+
+    <p>La gestión de la E/S es un componente crítico de los sistemas operativos, este nos permite la interacción fluida entre el hardware y el software, optimizando el rendimiento del sistema y garantizando la estabilidad de las aplicaciones.</p>
+
+    <img src="rei1.jpg" alt="Rei">
+    
 </body>
 </html>

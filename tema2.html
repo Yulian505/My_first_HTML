@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Diferentes tipos de dispositivos de E/S</h2>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+    <hr>
+    <p>Los dispositivos de entrada y salida son fundamentales en cualquier sistema operativo, ya que permiten la comunicación entre el usuario y el hardware del sistema.</p>
+    <p>Estos dispositivos pueden clasificarse en diferentes categorías según su funcionamiento y características.</p>
+
+    <hr>
+
+    <h2>Clasificación de los Dispositivos de Entrada y Salida</h2>
+
+    <h3>Dispositivos de Bloque</h3>
+
+    <p>Estos dispositivos son los que manejan los datos en bloques de tamaño fijo y permiten el acceso directo a cualquier bloque sin la necesidad de leerlos en orden secuencial.</p>
+    <p>Siendo los:</p>
+
+    <ul>
+        <li>Discos duros (HDD)</li>
+        <li>Unidades de estado sólido (SSD)</li>
+        <li>Unidades de CD/DVD</li>
+    </ul>
+
+    <p>En sus características tenemos que estos permiten acceso aleatorio, almacenan grandes volúmenes de datos y que son esenciales para los sistemas de archivos del sistema operativo.​</p>
+
+    <h3>Dispositivos de Carácter</h3>
+
+    <p>Estos dispositivos son los que transmiten los datos en una secuencia de bytes o caracteres sin agruparlos en bloques fijos.</p>
+    <p>Entrando a esta categoría estan los:</p>
+
+    <ul>
+        <li>Teclados</li>
+        <li>Ratones</li>
+        <li>Impresoras</li>
+        <li>Puertos serie y USB</li>
+    </ul>
+
+    <p>En sus características tenemos que estos tienen la transferencia de datos que ocurre en un flujo continuo y que generalmente requieren que el sistema operativo implemente buffering para mejorar el rendimiento​</p>
+
+    <h3>Dispositivos de Red</h3>
+
+    <p>Estos dispositivos de red facilitan la comunicación entre computadoras y otros dispositivos en una red, entrandando los:</p>
+
+    <ul>
+        <li>Tarjetas de red Ethernet</li>
+        <li>Adaptadores Wi-Fi</li>
+        <li>Módems</li>
+    </ul>
+
+    <p>En las características más importantes estan que utilizan protocolos específicos como el TCP/IP y que pueden operar en modo síncrono o asíncrono dependiendo de la latencia y la velocidad de transferencia.</p>
+
+    <hr>
+
+    <h2>Interacción de los Dispositivos con el Sistema Operativo</h2>
+
+    <h3>Controladores de Dispositivo (Device Drivers)</h3>
+    
+    <p>El sistema operativo interactúa con los dispositivos de E/S a través de controladores de dispositivo, que son programas específicos que traducen las instrucciones genéricas del sistema operativo a comandos comprensibles para el hardware.</p>
+
+    <h3>Gestión de Dispositivos por el Kernel</h3>
+
+    <p>El subsistema de E/S dentro del kernel del sistema operativo administra varios aspectos, como lo son:</p>
+
+    <ul>
+        <li>Asignación de dispositivos a procesos.</li>
+        <li>Manejo de interrupciones y errores en dispositivos.</li>
+        <li>Gestión de almacenamiento en caché y buffering para mejorar el rendimiento​.</li>
+    </ul>
+
+    <h3>Métodos de Transferencia de Datos</h3>
+
+    <p>Para poder mejorar la eficiencia en la comunicación entre el procesador y los dispositivos de E/S, el sistema operativo puede utilizar diferentes métodos, como lo son:</p>
+
+    <ul>
+        <li>E/S Programada: La CPU consulta constantemente al dispositivo para saber si está listo para transferir datos.</li>
+        <li>E/S por Interrupciones: El dispositivo envía una señal a la CPU cuando está listo, reduciendo la carga del procesador.</li>
+        <li>Acceso Directo a Memoria (DMA): Permite que los dispositivos transfieran datos directamente a la memoria sin la intervención de la CPU, optimizando el rendimiento​.</li>
+    </ul>
+
+    <img src="rei2.jpg" alt="Rei">
+</body>
+</html>
