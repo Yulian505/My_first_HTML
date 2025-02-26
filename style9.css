@@ -9,6 +9,13 @@ header{
     line-height: 100px;
 }
 
+@keyframes animarBorde {
+    0% { border-color: rgb(250, 153, 62); }
+    25% { border-color: rgb(252, 122, 2); }
+    50% { border-color: rgb(218, 118, 5); }
+    75% { border-color: rgb(168, 111, 4); }
+    100% { border-color: rgb(121, 88, 0); }
+}
 
 img{
     width: 30%;
@@ -21,6 +28,12 @@ img{
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(12, 12, 12);
     border: 2px solid rgb(29, 187, 29);
+        /*animación*/
+        width: 300px;
+        height: 300px;
+        border: 5px solid transparent;
+        animation: animarBorde 2s infinite linear;
+        padding: 10px;
 }
 
 hr{
@@ -75,6 +88,9 @@ ul{
 li{
     color: rgb(20, 20, 20);
     font-size: 20px;
+    text-align: justify; /* Justifica el texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 10px 0;
 }
 
 p{

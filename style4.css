@@ -1,5 +1,10 @@
 body {
     background: rgb(245, 53, 117);
+    background-image: url(''); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
 }
 
 hr{
@@ -61,6 +66,9 @@ ul{
 li{
     color: rgb(20, 20, 20);
     font-size: 20px;
+    text-align: justify; /* Justifica el texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 10px 0;
 }
 
 p{
@@ -73,6 +81,14 @@ p{
     margin-bottom: 10%;
 }
 
+@keyframes animarBorde {
+    0% { border-color: rgb(255, 140, 140); }
+    25% { border-color: rgb(241, 85, 85); }
+    50% { border-color: rgb(253, 53, 53); }
+    75% { border-color: rgb(253, 21, 21); }
+    100% { border-color: red; }
+}
+
 img{
     width: 40%;
     height: 30%;
@@ -83,5 +99,10 @@ img{
     margin-top: 10%;
     margin-bottom: 10%;
     box-shadow: 5px 5px 5px rgb(12, 12, 12);
+    width: 300px;
+    height: 300px;
+    border: 5px solid transparent;
+    animation: animarBorde 2s infinite linear;
+    padding: 10px;
 }
 

@@ -6,6 +6,10 @@
 body {
     background: rgb(112, 180, 247);
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url('reifond.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 h1 {
@@ -44,10 +48,18 @@ hr{
     margin-bottom: 10%;
 }
 
+@keyframes animarBorde {
+    0% { border-color: rgb(92, 81, 236); }
+    25% { border-color: rgb(5, 5, 238); }
+    50% { border-color: rgb(38, 41, 182); }
+    75% { border-color: rgb(1, 7, 87); }
+    100% { border-color: rgb(85, 48, 219); }
+}
+
 img{
     width: 20%;
-    height: 10%;
-    border-radius: 50%;
+    height: 20%;
+    border-radius: 80%;
     border: 2px solid rgb(117, 4, 47);
     margin-left: auto;
     margin-right: auto;
@@ -55,6 +67,12 @@ img{
     margin-top: 10%;
     margin-bottom: 10%;
     box-shadow: 5px 5px 5px rgb(12, 12, 12);
+    /*animación*/
+    width: 300px;
+    height: 300px;
+    border: 5px solid transparent;
+    animation: animarBorde 2s infinite linear;
+    padding: 10px;
 }
 
 input{
@@ -83,6 +101,9 @@ li{
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align: justify; /* Justifica el texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 10px 0;
 }
 
 p{
@@ -94,3 +115,4 @@ p{
     margin-top: 10%;
     margin-bottom: 10%;
 }
+
