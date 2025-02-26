@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div id="Container">
+        <header>
+         <h2>Archivos especiales y Transferencia orientada a bloques</h2>
+        </header>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>Archivos especiales</h3>
+
+    <p>Los archivos especiales son un tipo de archivo utilizado por los sistemas operativos para poder interactuar con dispositivos de hardware o facilitar la comunicación entre procesos. Siendo encontrados principalmente en sistemas basados en UNIX y Linux, donde aparecen en el directorio /dev. Estos archivos no contienen datos como los archivos regulares, sino que actúan como una interfaz para otros recursos del sistema.</p>
+
+    <p>Tipos de Archivos Especiales: Los archivos especiales se pueden clasificar en varias categorías según su función.</p>
+
+    <ul>
+        <p>Archivos de Dispositivos: Estos archivos representan dispositivos de hardware y permiten que los programas accedan a ellos como si fueran archivos normales</p>
+        <li>Archivos de Dispositivos de Bloques: Siendo utilizados para dispositivos que almacenan datos en bloques, como lo son los discos duros y unidades USB. Permitiendo acceso aleatorio a los datos.</li>
+        <li>Archivos de Dispositivos de Caracteres: Siendo usados para dispositivos que transmiten datos secuencialmente, como teclados, ratones e impresoras.</li>
+
+        <p>Archivos de Tuberías (Pipes): Permiten la comunicación entre procesos a través de archivos temporales en el sistema.</p>
+
+        <li>Tuberías Ordinarias: Son creadas en memoria y solo existen mientras los procesos se están ejecutando.</li>
+        <li>Tuberías Nombradas (Named Pipes o FIFOs): Son archivos persistentes en el sistema de archivos que permiten la comunicación entre procesos sin necesidad de una relación padre-hijo.</li>
+
+        <p>Enlaces Simbólicos y Duros: Permiten la referencia a otros archivos en el sistema</p>
+
+        <li>Enlace simbólico (Soft Link): Siendo un archivo que apunta a otro archivo, similar a un atajo en Windows.</li>
+        <li>Enlace duro (Hard Link): Un segundo nombre para un mismo archivo físico. Ambos comparten el mismo inodo y solo se eliminan cuando todas las referencias son eliminadas.</li>
+
+        <p>Archivos de Red y Sockets: Estos archivos permiten la comunicación entre procesos locales o a través de la red</p>
+
+        <li>Sockets: Siendo usados en redes para permitir la comunicación entre máquinas diferentes mediante el protocolo TCP/IP.</li>
+        <li>Mailslots: Siendo utilizados en Windows para enviar mensajes entre procesos sin una conexión persistente.</li>
+
+        <p>Función y Uso de los Archivos Especiales</p>
+
+        <li>Los archivos especiales facilitan la interacción con el sistema operativo y los dispositivos de hardware sin necesidad de usar APIs complicadas. Gracias a ellos los programas pueden leer y escribir en un dispositivo como si fuera un archivo normal, como también se pueden establecer conexiones entre procesos de manera eficiente y los enlaces simbólicos ayudan en la gestión del sistema de archivos.</li>
+
+        <p>Estos archivos son esenciales para el correcto funcionamiento del sistema operativo y proporcionan una forma flexible de acceso a los recursos del sistema.</p>
+
+    </ul>
+
+    <hr>
+
+    <h3>Transferencia Orientada a Bloques</h3>
+
+    <p>La transferencia orientada a bloques es un método de transferencia de datos en sistemas de almacenamiento y dispositivos de entrada/salida (I/O) que permite mover grandes cantidades de información de manera eficiente. Se usa principalmente en discos duros, SSDs y otros dispositivos de almacenamiento masivo.</p>
+
+    <p>Las características de la Transferencia Orientada a Bloques son:</p>
+
+    <ul>
+        <li>Unidad de transferencia: Se basa en bloques de datos de tamaño fijo (por ejemplo, 512 bytes o 4 KB).</li>
+        <li>Eficiencia: Reduciendo la sobrecarga del procesador al mover grandes cantidades de datos en una sola operación.</li>
+        <li>Uso del acceso directo a memoria (DMA): Permite que los datos sean transferidos directamente entre el dispositivo y la memoria sin la intervención constante de la CPU.</li>
+        <li>Método de almacenamiento: Utiliza una estructura de direccionamiento basada en bloques lógicos, facilitando la organización y recuperación de información.</li>
+    </ul>
+
+    <p>Modos de Transferencia de Bloques</p>
+
+    <ul>
+       <p>Modo de Robo de Ciclo (Cycle Stealing)</p>
+       <li>El controlador de DMA solicita el bus para transferir un solo bloque de datos a la memoria.</li>
+       <li>Cada transferencia "roba" un ciclo del bus a la CPU, ralentizándola ligeramente.</li>
+
+       <p>Modo de Ráfaga (Burst Mode)</p>
+
+       <li>El DMA toma el control del bus para transferir varios bloques consecutivamente.</li>
+       <li>Es más eficiente que el robo de ciclo, ya que reduce el tiempo de adquisición del bus.</li>
+       <li>Puede bloquear el acceso a otros dispositivos mientras la transferencia está en curso.</li>
+
+       <p>Transferencia Directa (Fly-by Mode)</p>
+
+       <li>El DMA ordena al dispositivo que envíe los datos directamente a la memoria sin almacenarlos en un buffer intermedio.</li>
+       <li>Reduce la latencia y mejora la velocidad de transferencia.</li>
+    </ul>
+
+    <p>Las ventajas que nos ofrece la Transferencia Orientada a Bloques son:</p>
+    <ul>
+        <li>Mayor eficiencia en transferencias grandes.</li>
+        <li>Reduce la intervención de la CPU, liberando recursos para otras tareas.</li>
+        <li>Optimiza el rendimiento del almacenamiento masivo.</li>
+
+        <p>En las desventajas se encuentran:</p>
+
+        <li>Puede causar latencia en otros procesos si el bus está ocupado.</li>
+        <li>No es ideal para dispositivos que requieren acceso en tiempo real a pequeñas cantidades de datos.</li>
+        <li>La fragmentación del almacenamiento puede afectar la velocidad de acceso.</li>
+    </ul>
+
+    <p>La transferencia orientada a bloques es fundamental para la comunicación eficiente entre dispositivos de almacenamiento y la memoria del sistema, asegurando que los datos sean manejados de manera óptima y rápida</p>
+
+    <img src="asuka.jpg" alt="Asuka">
+
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+</body>
+</html>

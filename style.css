@@ -1,5 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background: rgb(112, 180, 247);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -12,13 +18,40 @@ h1 {
     margin-bottom: 10%;
 }
 
+#Container{
+    width: 70%;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(12, 12, 12);
+}
+
+header{
+    background: rgb(51, 51, 211);
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+}
+
+hr{
+    color: rgb(36, 35, 36);
+    background-color: rgb(36, 35, 36);
+    height: 2px;
+    border: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
 img{
     width: 20%;
     height: 10%;
     border-radius: 50%;
     border: 2px solid rgb(117, 4, 47);
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     margin-top: 10%;
     margin-bottom: 10%;
     box-shadow: 5px 5px 5px rgb(12, 12, 12);
@@ -35,18 +68,21 @@ input{
 }
 
 ul{
-    color: rgb(22, 22, 22);
     font-size: 10px;
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 10%;
     margin-bottom: 10%;
+
 }
 
 li{
     color: rgb(20, 20, 20);
     font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 p{

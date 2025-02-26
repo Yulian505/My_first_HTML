@@ -1,5 +1,5 @@
 body {
-    background: rgb(236, 209, 119);
+    background: rgb(41, 143, 109);
 }
 
 hr{
@@ -14,7 +14,7 @@ hr{
 }
 
 header{
-    background: rgb(182, 134, 30);
+    background: rgb(5, 182, 173);
     text-align: center;
     font-size: 30px;
     line-height: 100px;
@@ -74,9 +74,9 @@ p{
 }
 
 img{
-    width: 20%;
-    height: 10%;
-    border: 2px solid rgb(192, 135, 13);
+    width: 40%;
+    height: 30%;
+    border: 2px solid rgb(15, 150, 116);
     margin-left: auto;
     margin-right: auto;
     display: block;

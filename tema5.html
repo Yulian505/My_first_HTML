@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <div id="Container">
+        <header>
+         <h2>Organización de los archivos y Directorio</h2>
+        </header>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>Organización de los archivos</h2>
+
+    <p>La organización de archivos se refiere a cómo los datos dentro de un archivo están estructurados y almacenados en un sistema de archivos, dependiendo del tipo de acceso requerido y del rendimiento esperado existen diferentes formas de organizar los archivos.</p>
+
+    <p>Organización Secuencial: En donde los registros se almacenan en un orden específico, generalmente siguiendo un criterio de clave primaria y se utiliza en sistemas donde la lectura y escritura son predominantemente secuenciales, como archivos de texto y logs.</p>
+
+    <p>Organización Directa (o Aleatoria): En donde los datos se almacenan en cualquier posición dentro del archivo, permitiendo el acceso inmediato a un registro específico y se usa una función de direccionamiento (hashing) para calcular la ubicación de los datos, siendo común en bases de datos y sistemas que requieren acceso rápido a registros específicos.</p>
+
+    <p>Organización Indexada Secuencial: Donde se combina lo mejor de la organización secuencial y la directa, y se usa en bases de datos y sistemas de archivos que necesitan acceder a registros de manera eficiente.</p>
+
+    <p>Métodos de Almacenamiento de Archivos: Los archivos pueden ser almacenados en disco utilizando distintas estrategias para optimizar el acceso y el uso del espacio.</p>
+
+    <ul>
+        <li>Almacenamiento Contiguo: En donde se asigna un espacio contiguo en disco para cada archivo y permite acceso rápido, pero puede llevar a la fragmentación y problemas para expandir archivos.</li>
+        <li>Almacenamiento Enlazado: En donde cada archivo se compone de bloques dispersos en el disco, unidos mediante punteros y reduce la fragmentación, pero puede ralentizar el acceso aleatorio a datos.</li>
+        <li>Almacenamiento Indexado: Se mantiene una tabla de índices que apunta a las ubicaciones de los bloques de datos y optimiza la búsqueda de registros sin necesidad de recorrer todo el archivo.</li>
+    </ul>
+
+    <hr>
+    
+    <h3>Directorio</h3>
+
+    <p>Un directorio es un componente fundamental del sistema de archivos de un sistema operativo, funcionando como una estructura que organiza y administra los archivos almacenados en un sistema de almacenamiento. Su propósito es facilitar el acceso, la organización y la protección de los archivos. En los dicretorios existen varios tipos siendo:</p>
+
+    <ul>
+        <li>Directorio de Nivel Único: Siendo el esquema más simple, donde todos los archivos están almacenados en un solo directorio. Siendo su principal desventaja: cuando el número de archivos crece, puede ser difícil encontrarlos y manejar nombres duplicados.</li>
+        <li>Directorio de Dos Niveles: Este separa los archivos de diferentes usuarios asignando a cada uno su propio directorio. Sin embargo, puede ser restrictivo cuando los usuarios necesitan compartir archivos.</li>
+        <li>Directorio Jerárquico o en Árbol: Permite crear subdirectorios dentro de directorios principales, formando una estructura en árbol, y siendo el modelo es el más utilizado en sistemas modernos como Linux, Windows y macOS.</li>
+        <li>. Directorio en Grafo Acíclico: Permite compartir archivos entre usuarios sin duplicar el contenido, mediante enlaces simbólicos o duros. Su problema potencial es el manejo de referencias cíclicas y control de eliminación de archivos compartidos.</li>
+        <li>Directorio en Grafo General: Siendo similar al anterior, pero permite enlaces cíclicos. Pero puede generar problemas de navegación infinita y dificultades en la gestión del espacio.</li>
+    </ul>
+
+    <p>Algunas operaciones comunes que se pueden realizar en un directorio son:</p>
+
+    <ul>
+        <li>Creación y Eliminación de Archivos/Directorios permitiendo añadir o eliminar elementos en la estructura del sistema de archivos.</li>
+        <li>Búsqueda de Archivos la localización de archivos por nombre o atributos.</li>
+        <li>Listar Contenidos la visualización de archivos dentro de un directorio.</li>
+        <li>Cambio de Directorio la navegación entre distintos niveles del sistema de archivos.</li>
+        <li>Control de Acceso la implementación de permisos para restringir el acceso a archivos y directorios</li>
+    </ul>
+
+    <img src="rei4.jpg" alt="Rei">
+
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+</body>
+</html>

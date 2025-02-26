@@ -8,7 +8,10 @@
 </head>
 <body>
 
-    <h2>Mecanismos de gestión de E/S</h2>
+    <div id="Container">
+        <header>
+         <h2>Tipos de archivos y Estructura de los archivos y métodos de acceso</h2>
+        </header>
 
     <ul>
         <li>
@@ -18,14 +21,76 @@
 
     <hr>
 
-    <h3>Mecanismos de Gestión de Entrada y Salida (E/S) en Sistemas Operativos</h3>
+    <h3>Tipos de archivos</h3>
 
-    <p>Los sistemas operativos utilizan diversos mecanismos para gestionar las operaciones de E/S y optimizar la comunicación entre el procesador, la memoria y los dispositivos periféricos, en ellos estan los principales mecanismos que encuentran las interrupciones, el buffering y el spooling.</p>
-    
+    <p>Los tipos de archivos en un sistema operativo se clasifican en función de su contenido y uso, según la información encontrada en los documentos, los tipos de archivos más comunes son:</p>
+
+    <ul>
+        <p>Archivos Regulares, siendo los archivos más comunes y pueden contener datos en distintos formatos:</p>
+        <li>Archivos de texto (.txt, .log, .csv): Contienen información en caracteres legibles por humanos.</li>
+        <li>Archivos binarios (.exe, .dll, .so): Estos contienen datos en formato binario, como programas ejecutables o bibliotecas.</li>
+        <li>Archivos multimedia (.mp3, .mp4, .jpg, .png): Este almacena contenido de audio, video o imágenes.</li>
+        <li>Archivos comprimidos (.zip, .rar, .tar): Estos contienen múltiples archivos empaquetados y comprimidos para reducir el tamaño.</li>
+    </ul>
+
+    <ul>
+        <p>Archivos de Sistema: Son esenciales para el funcionamiento del sistema operativo y generalmente están protegidos contra modificaciones por parte del usuario.</p>
+        <li>Archivos de configuración (.ini, .cfg, .conf): Contienen ajustes y parámetros del sistema o aplicaciones.</li>
+        <li>Archivos de registro (.log): Guardan información sobre eventos y errores del sistema.</li>
+        <li>Archivos de dispositivos: Estos representan dispositivos físicos en el sistema y se encuentran en directorios especiales, como /dev en Linux.</li>
+
+        <p>Archivos de Programa, estos ejecutan instrucciones y permiten la ejecución de software:</p>
+        <li>Archivos ejecutables (.exe en Windows, .out en Linux).</li>
+        <li>Archivos de script (.sh, .bat, .ps1): Siendo secuencias de comandos interpretadas por una shell.</li>
+        <li>Archivos de bibliotecas (.dll en Windows, .so en Linux): Estos contienen funciones usadas por múltiples programas.</li>
+    </ul>
+
+    <ul>
+        <p>Archivos de Control de Acceso, estos archivos almacenan información sobre permisos y accesos a recursos del sistema. Algunos ejemplos son:</p>
+        <li>Listas de control de acceso (ACLs): Controlan los permisos en sistemas como Windows y Linux.</li>
+        <li>Archivos de claves y certificados (.pem, .crt, .key): Siendo usados en seguridad y autenticación.</li>
+         
+        <p>Archivos Especiales (UNIX/Linux), algunos sistemas operativos como Linux y UNIX tienen tipos de archivos adicionales siendo:</p>
+        <li>Archivos de dispositivos: Permiten la comunicación con hardware como el "/dev" y "/sda".</li>
+        <li>Enlaces simbólicos (symlinks): Son archivos que apuntan a otros archivos o directorios</li>
+        <li>Sockets y pipes: Siendo usados para la comunicación entre procesos.</li>
+    </ul>
+
     <hr>
-    
-    <h3>Interrupciones en E/S</h3>
 
-    <p>Las interrupciones permiten que el procesador sea notificado cuando un dispositivo ha completado una operación de E/S, esto evita que la CPU pierda tiempo en espera activa.</p>
+    <h3>Estructura de los archivos y métodos de acceso</h3>
+
+    <p>La estructura de un archivo define cómo están organizados los datos dentro de él, existiendo diferentes estructuras según el sistema operativo y el tipo de archivo, siendo:</p>
+
+    <ul>
+        <li>Secuencia de Bytes: Siendo el modelo más flexible, usado en UNIX y Windows, este no hay estructura definida y las aplicaciones interpretan los datos según su propósito.</li>
+        <li>Secuencia de Registros: El archivo se organiza en registros de tamaño fijo en donde cada uno con una estructura interna definida. En este modelo fue común en sistemas antiguos basados en tarjetas perforadas.</li>
+        <li>Estructura en Árbol: Este se usa en bases de datos y archivos indexados, en donde los registros contienen claves ordenadas para facilitar la búsqueda rápida.</li>
+
+        <p>Los archivos pueden tener estructuras internas organizadas en bloques físicos y lógicos, lo que permite una mejor gestión del almacenamiento y acceso a los datos.</p>
+    </ul>
+
+    <p>Métodos de Acceso, los archivos pueden ser accedidos de diferentes maneras, dependiendo del sistema operativo y el propósito del archivo.</p>
+
+    <ul>
+        <li>Acceso Secuencial: Sindo el más simple y común, al igual que los datos se leen en orden, desde el inicio hasta el final del archivo. Siendo usado en editores de texto y compiladores, y implementado en sistemas como UNIX y Windows.</li>
+
+        <li>Acceso Directo (Aleatorio): Permite acceder a cualquier parte del archivo sin leer todo el contenido previo. Como también se basa en registros de tamaño fijo y es ideal para bases de datos, y se puede acceder a un registro específico calculando su posición dentro del archivo.</li>
+
+        <li>Acceso Indexado: Este utiliza un índice que almacena punteros a las ubicaciones de los datos. Al igual que es similar al índice de un libro, facilita búsquedas rápidas y usado en sistemas de bases de datos y sistemas de archivos avanzados como NTFS y ext4.</li>
+
+        <li>Acceso por Clave: En este se utiliza en archivos organizados como árboles, donde los registros contienen una clave única. Como también permite buscar y recuperar registros de forma eficiente sin recorrer todo el archivo y siendo común en bases de datos y sistemas de almacenamiento distribuidos.</li>
+    </ul>
+
+
+    <img src="rei3.jpg" alt="Rei">
+
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
 </body>
 </html>

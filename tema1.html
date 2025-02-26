@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style1.css">    
 </head>
 <body>
-    <h2>Conceptos fundamentales</h2>
+
+    <div id="Container">
+        <header>
+            <h2>Conceptos de archivo y Operaciones con archivos</h2>
+        </header>
 
     <ul>
         <li>
@@ -17,59 +21,68 @@
 
     <hr>
 
-    <h3>Definición y Propósito de las Operaciones de la E/S</h3>
+    <h2>Conceptos de Archivo</h2>
 
-    <p>Las operaciones de entrada y salida (E/S) en los sistemas operativos son fundamentales para la comunicación entre el hardware y el software.</p>
-    <p>Ya que las operaciones de entrada y salida permiten que un sistema operativo interactúe con dispositivos periféricos como lo son los discos duros, impresoras, teclados, pantallas y redes. Estas operaciones son las que gestionan el flujo de datos entre la CPU, la memoria y los dispositivos externos, garantizando la eficiencia y estabilidad del sistema.​</p>
+    <p>El concepto de archivo en sistemas operativos es fundamental, ya que representa la unidad lógica de almacenamiento de datos, los archivos pueden contener datos de usuario, programas o información del sistema y son administrados por el Administrador de Archivos o File Manager.</p>
+
+    <h3>Administración de Archivos</h3>
+    <p>El File Manager es el módulo del sistema operativo encargado de crear, eliminar, modificar y acceder a archivos, como también de administrar el espacio de almacenamiento en dispositivos como discos duros, SSDs, memorias USB y de controlar el acceso a los archivos para mantener la seguridad e integridad de los datos​.</p>
+    
+    <h3> Organización de los Archivos</h3>
+
+    <p>Los archivos pueden organizarse de diferentes formas según su uso y acceso,
+
+        cada archivo se compone de:
+        
+        <ul>
+         <li>Registros, que contienen datos organizados en campos.</li>
+         <li>Bloques de almacenamiento, que agrupan varios registros.</li>
+        </ul>
+    </p>
+
+    <p> Siendo que su estructura podrá ser;</p>
+    <ul>
+        <li>Secuencial: En donde los datos se almacenan en orden continuo.</li>
+        <li>Indexada: En este se mantiene un índice que permite ubicar rápidamente los datos.​</li>
+        <li>Directa (aleatoria): Se accede a cualquier parte del archivo sin necesidad de recorrerlo todo.</li>
+    </ul>
+    <p>Los métodos de Acceso a Archivos pueden ser:
+        <ul>
+         <li>Acceso secuencial: En donde se leen los datos en orden.</li>
+         <li>Acceso directo: En donde se salta directamente a la posición deseada dentro del archivo​.</li>
+        </ul>
 
     <hr>
 
-    <h3>Interfaz de la E/S y Tipos de Dispositivos</h2>
-    <p>El sistema operativo proporciona una interfaz de E/S que abstrae los detalles específicos del hardware, facilitando el acceso a los dispositivos mediante llamadas al sistema o conoxidas tambien como "system calls". Con esto los dispositivos se dividen en:</p>
+    <h2>Operaciones con Archivos</h2>
+
+    <p>Las operaciones con archivos en un sistema operativo incluyen todas las acciones que se pueden realizar sobre los archivos, ya sea para crearlos, modificarlos, eliminarlos o administrarlos. Basándome en los libros que proporcionaste, las principales operaciones con archivos son:</p>
+
     <ul>
-        <li>Dispositivos de bloque: Los discos duros que manejan los datos en bloques fijos.</li>
-        <li>Dispositivos de carácter: Los teclados y ratones que transmiten los datos en flujo continuo.</li>
+        <li>Creación de archivos: Este permite generar un nuevo archivo con un nombre y un tipo específico.</li>
+        <li>Apertura de archivos: Donde un archivo debe abrirse antes de ser usado, la apertura puede ser en modo lectura, escritura o ambos.</li>
+        <li>Lectura de archivos: Se extraen datos del archivo y se cargan en memoria para su procesamiento.</li>
+        <li>Escritura de archivos: Se agregan o modifican datos dentro de un archivo.</li>
+        <li>Cierre de archivos: Se libera el archivo de la memoria una vez que se ha terminado de usar.</li>
+        <li>Eliminación de archivos: Borra el archivo del sistema de almacenamiento.</li>
+        <li>Renombrado de archivos: Permite cambiar el nombre de un archivo sin modificar su contenido.</li>
+        <li>Copiado y movimiento de archivos: Este permite transferir archivos dentro del mismo sistema o a otro dispositivo de almacenamiento.</li>
+        <li>Cambio de permisos de acceso: SSe define quién puede leer, escribir o ejecutar un archivo.</li>
+        <li>Bloqueo de archivos: En donde se restringe el acceso simultáneo a un archivo para evitar inconsistencias en los datos.</li>
     </ul>
 
-    <hr>
+    <p>Cada una de estas operaciones es gestionada por el gestor de archivos del sistema operativo, que se encarga de la interacción entre el usuario y el almacenamiento físico.</p>
 
-    <h3>Métodos de Comunicación con los Dispositivos</h3>
-
-    <p>Existen varios métodos para gestionar la comunicación entre la CPU y los dispositivos de E/S siendo:</p>
-    <ul>
-        <li>E/S Programada: La CPU espera activamente hasta que el dispositivo complete la operación.</li>
-        <li>E/S por Interrupciones: El dispositivo notifica a la CPU cuando está listo para intercambiar datos, haciendo que se reduzca el uso innecesario del procesador.</li>
-        <li>Acceso Directo a la Memoria (DMA): Un controlador especial es el que transfiere los datos directamente entre la memoria y el dispositivo, sin que haya intervención de la CPU.​</li>
-    </ul>
-
-    <hr>
-
-    <h3>Optimización del Rendimiento de la E/S</h3>
-
-    <p>Para poder mejorar la eficiencia de las operaciones de E/S, los sistemas operativos utilizan varias técnicas, siendo los más conocidos:</p>
-    <ul>
-        <li>Buffering: Usa la memoria intermedia para mejorar el rendimiento.</li>
-        <li>Spooling: Siendo un almacenamiento temporal de datos en el disco antes de enviarlos al dispositivo.</li>
-        <li>Caching: Uso de la memoria caché para acelerar el acceso a datos frecuentes.</li>
-    </ul>
-
-    <hr>
-
-    <h3>Manejo de Errores y Protección en la E/S</h3>
-
-    <p>Los sistemas operativos deben manejar errores en las operaciones de E/S como lo son fallos en los discos o desconexiones de red.</p>
-    <p> Para ello el sistema debe usar métodos y estrategias</p>
-    <ul>
-        <li>Reintentos automáticos en el caso de errores transitorios.</li>
-        <li>Protección de la memoria para evitar que los procesos no autorizados accedan a dispositivos de E/S.</li>
-        <li>Sistemas de logging para registrar los fallos y depurarlos​</li>
-    </ul>
-
-    <hr>
-
-    <p>La gestión de la E/S es un componente crítico de los sistemas operativos, este nos permite la interacción fluida entre el hardware y el software, optimizando el rendimiento del sistema y garantizando la estabilidad de las aplicaciones.</p>
 
     <img src="rei1.jpg" alt="Rei">
+
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
     
 </body>
 </html>

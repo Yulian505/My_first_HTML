@@ -1,5 +1,26 @@
 body {
-    background: rgb(236, 209, 119);
+    background: rgb(206, 219, 59);
+}
+
+header{
+    background: rgb(215, 228, 44);
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+}
+
+
+img{
+    width: 40%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(12, 12, 12);
+    border: 2px solid rgb(210, 231, 15);
 }
 
 hr{
@@ -11,13 +32,6 @@ hr{
     margin-right: 10%;
     margin-top: 10%;
     margin-bottom: 10%;
-}
-
-header{
-    background: rgb(182, 134, 30);
-    text-align: center;
-    font-size: 30px;
-    line-height: 100px;
 }
 
 h2 {
@@ -71,17 +85,5 @@ p{
     margin-right: 10%;
     margin-top: 10%;
     margin-bottom: 10%;
-}
-
-img{
-    width: 20%;
-    height: 10%;
-    border: 2px solid rgb(192, 135, 13);
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    box-shadow: 5px 5px 5px rgb(12, 12, 12);
 }
 

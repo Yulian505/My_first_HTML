@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+    <div id="Container">
+        <header>
+         <h2>Modelo tradicional de UNIX y Listas de control de acceso</h2>
+        </header>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>Modelo tradicional de UNIX</h3>
+
+    <p>El modelo tradicional de UNIX se basa en una arquitectura simple pero poderosa que ha sido la base de muchos sistemas operativos modernos. Se compone de varios elementos clave que trabajan juntos para proporcionar un entorno eficiente y flexible.</p>
+
+    <ul>
+        <p>El sistema UNIX sigue una estructura de capas bien definida, donde cada componente desempeña una función específica.</p>
+        <li>Nivel del Usuario: Contiene aplicaciones, comandos de shell y compiladores. Los usuarios interactúan con el sistema a través del Shell, que interpreta comandos y gestiona procesos.</li>
+        <li>Nivel del Kernel: Actúa como intermediario entre el hardware y los procesos del usuario. Maneja sistema de archivos, administración de memoria, planificación de CPU y control de dispositivos.</li>
+        <li>Nivel de Hardware: Compuesto por dispositivos físicos como CPU, memoria y discos. Se comunica con el kernel a través de controladores de dispositivos.</li>
+    </ul>
+
+    <p>UNIX es un sistema multiprogramado que permite ejecutar múltiples procesos simultáneamente. Su modelo de procesos sigue reglas siendo:</p>
+
+    <ul>
+        <li>Creación de Procesos: Se realiza mediante fork(), que genera un proceso hijo idéntico al padre.</li>
+        <li>Ejecución de Programas: Se utiliza exec() para reemplazar el código del proceso con uno nuevo.</li>
+        <li>Planificación de Procesos: Se usa un algoritmo de prioridad dinámica con round-robin en casos extremos.</li>
+        <li>Gestión de Memoria: Usa swapping y paginación para optimizar el uso de memoria.</li>
+    </ul>
+
+    <p>UNIX organiza los archivos en una estructura jerárquica de acuerdo a sus características:</p>
+
+    <ul>
+        <li>Directorio Raíz (/): Punto de inicio del sistema de archivos.</li>
+        <li>Archivos y Directorios: Se identifican mediante i-nodes, que almacenan metadatos sobre los archivos.</li>
+        <li>Permisos de Archivos: Control de acceso basado en usuario, grupo y otros (rwx).</li>
+        <li>Enlaces Simbólicos y Duros: Permiten referencias a archivos sin duplicar su contenido.</li>
+    </ul>
+
+    <p>El modelo tradicional de UNIX ha influenciado significativamente los sistemas operativos modernos. Su enfoque modular y su arquitectura eficiente han permitido su evolución y adaptación a nuevas tecnologías.</p>
+
+    <hr>
+
+    <h3>Listas de Control de Acceso</h3>
+
+    <p>Las Listas de Control de Acceso (ACL) son un mecanismo de seguridad utilizado en los sistemas operativos para definir permisos detallados sobre archivos y directorios. A diferencia del esquema tradicional de permisos basado en usuario, grupo y otros, las ACL permiten especificar reglas individuales para cada usuario o grupo, proporcionando un control más granular sobre los recursos del sistema.</p>
+
+    <p>Las ACL pueden implementarse en diferentes sistemas operativos de dos maneras principales:</p>
+
+    <ul>
+        <li>ACL Positivas (Allow ACLs): Indican qué usuarios o grupos tienen permisos específicos sobre un archivo o directorio.</li>
+        <li>ACL Negativas (Deny ACLs): Especifican restricciones explícitas, bloqueando acceso incluso si otro permiso lo permite.</li>
+    </ul>
+
+    <p>Las ACL son una mejora del modelo de Matriz de Control de Acceso, que asigna permisos en forma de tabla con filas (archivos) y columnas (usuarios). Sin embargo, las matrices de control pueden volverse muy grandes e ineficientes en sistemas con muchos usuarios y archivos.</p>
+
+    <p>Las ACL ofrecen un control de acceso detallado y flexible en comparación con los modelos tradicionales de permisos. Aunque requieren una configuración más cuidadosa, permiten gestionar la seguridad de los archivos de manera eficiente en entornos multiusuario.</p>
+
+    <img src="rei7.jpg" alt="Rei">
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style9.css">
+</head>
+<body>
+    <div id="Container">
+        <header>
+            <h2>NFS y CIFS</h2>
+        </header>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>NFS</h3>
+
+    <p>NFS es un protocolo desarrollado por Sun Microsystems que permite a los sistemas UNIX y Linux acceder a archivos remotos como si fueran locales.</p>
+
+    <p>En características tenemos que son:</p>
+
+    <ul>
+        <li>Basado en el modelo cliente-servidor.</li>
+        <li>Usa llamadas Remote Procedure Call (RPC) para comunicarse con servidores de archivos remotos.</li>
+        <li>Permite la montura de sistemas de archivos remotos dentro de la jerarquía de directorios local.</li>
+        <li>No mantiene un estado en el servidor, lo que lo hace más resistente a fallos.</li>
+    </ul>
+
+    <p>Lo malo de este es que tiene limitaciones siendo:</p>
+
+    <ul>
+        <li>Que no garantiza consistencia estricta, lo que puede generar problemas en archivos compartidos.</li>
+        <li>La autenticación predeterminada es débil y puede requerir configuraciones adicionales para mejorar la seguridad.</li>
+    </ul>
+
+    <p>En funcionamiento tenemos que el cliente envía una solicitud para montar un directorio remoto. En el caso de que si el servidor lo permite, devuelve un identificador de archivo único y si el cliente usa este identificador para realizar operaciones como lectura y escritura. </p>
+
+    <hr>
+
+    <h3>CIFS</h3>
+
+    <p>CIFS es una versión extendida del protocolo Server Message Block (SMB), desarrollado por Microsoft para compartir archivos e impresoras en redes Windows.</p>
+
+    <p>En características tenemos que son:</p>
+
+    <ul>
+        <li>Permite compartir archivos entre sistemas Windows y otros sistemas operativos compatibles.</li>
+        <li>Soporta autenticación de usuarios mediante Active Directory</li>
+        <li>Ofrece control de acceso detallado y bloqueo de archivos para evitar modificaciones simultáneas.</li>
+    </ul>
+
+    <p>En funcionamiento tenemos que si un cliente solicita acceso a un recurso compartido en un servidor Windows. Este se autentica mediante usuario y contraseña o un dominio de red. Ya una vez conectado, el cliente puede acceder a archivos y directorios según sus permisos.</p>
+
+    <p>Si hacemos una comparación entre NFS y CIFS tenemos que:</p>
+
+    <ul>
+        <li>NFS esta optimizado para UNIX/Linux, mientras que CIFS es optimizado para Windows.</li>
+        <li>NFS utiliza como protocolo base el RPC, mientras que CIFS utiliza el protocolo SMB.</li>
+        <li>En NFS tenemos que en su autenticación es básica, mejorable con Kerberos, mientras que en CIFS su autenticación es avanzada con Active Directory.</li>
+        <li>El NFS tiene menos control sobre bloqueos en manejo de archivos, mientras que CIFS tiene bloqueo de archivos activo.</li>
+        <li>NFS en su rendimiento de red es más eficiente, a comparación de CIFS que tiene una mayor sobrecarga.</li>
+        <li>El NFS tiene un uso más recomendado en sistemas UNIX/Linux en redes locales, a diferencia de CIFS que se utiliza redes empresariales Windows.</li>
+    </ul>
+
+    <p>NFS y CIFS son protocolos clave para el acceso remoto a archivos. NFS es ideal para entornos UNIX/Linux, mientras que CIFS es más eficiente en redes Windows con autenticación avanzada.</p>
+
+    <img src="rei8.jpg" alt="Rei">
+
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+    
+</body>
+</html>

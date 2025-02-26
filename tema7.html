@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style7.css">    
+</head>
+<body>
+    <div id="Container">
+        <header>
+            <h2>Control de Acceso y Sistemas FAT</h2>
+        </header>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>Control de Acceso</h3>
+
+    <p>El control de acceso es un mecanismo de seguridad que regula quién puede acceder a los archivos y directorios dentro de un sistema operativo y qué tipo de operaciones pueden realizar. Su objetivo es proteger la integridad, confidencialidad y disponibilidad de la información almacenada.</p>
+
+    <p>Existen tres enfoques principales para el control de acceso en los sistemas operativos:</p>
+
+    <ul>
+        <li>Control de Acceso Discrecional (DAC): El propietario de un archivo o directorio decide quién puede acceder y qué permisos asignar. Este se basa en listas de control de acceso (ACL - Access Control List).</li>
+        <li>Control de Acceso Obligatorio (MAC):Las reglas de acceso están definidas por el sistema y no pueden ser modificadas por los usuarios. Se usa etiquetas de seguridad para clasificar datos y restringir accesos.</li>
+        <li>Control de Acceso Basado en Roles (RBAC): Los permisos se asignan según el rol del usuario dentro de la organización.</li>
+    </ul>
+
+    <p> En Métodos de Implementación de Control de Acceso tenemos:</p>
+
+    <ul>
+        <li>Matrices de Control de Acceso: Es una tabla donde las filas representan usuarios y las columnas representan archivos. Cada celda define los permisos como la lectura, escritura, ejecución, etc. Puede volverse ineficiente en sistemas con muchos usuarios y archivos.</li>
+        <li>Listas de Control de Acceso (ACLs): En donde cada archivo/directorio tiene una lista de usuarios autorizados con permisos específicos.</li>
+        <li>Listas de Capacidades: En lugar de asociar permisos a archivos, se asignan a usuarios específicos y siendo similar a una ACL, pero desde la perspectiva del usuario en lugar del archivo.</li>
+    </ul>
+
+    <p>Control de Acceso en Sistemas Operativos Específicos</p>
+     
+    <ul>
+        <li>Linux/UNIX: Control de acceso basado en permisos de usuario, grupo y otros (rwx). Uso de ACLs y SELinux para seguridad avanzada.</li>
+        <li>Windows: Uso de Access Control Entries (ACEs) en sistemas NTFS y implementa Windows User Account Control (UAC) para restringir accesos administrativos.</li>
+        <li>MacOS: Basado en listas de control de acceso avanzadas y sandboxing para aplicaciones.</li>
+    </ul>
+
+    <p>El control de acceso es un componente esencial en la seguridad informática. Los sistemas operativos modernos implementan diferentes enfoques para garantizar que los archivos y directorios sean accesibles solo por usuarios autorizados, evitando accesos no deseados y protegiendo la información crítica.</p>
+
+    <hr>
+
+    <h3>Sistemas FAT</h3>
+
+    <p>El sistema de archivos FAT (File Allocation Table) es uno de los primeros y más utilizados en la historia de los sistemas operativos. Fue desarrollado por Microsoft para MS-DOS y ha sido ampliamente utilizado en discos duros, unidades USB y tarjetas de memoria debido a su simplicidad y compatibilidad con múltiples sistemas operativos.</p>
+
+    <p>El sistema FAT organiza los archivos en una estructura jerárquica con tres componentes principales siendo:</p>
+
+    <ul>
+        <li>Boot Sector (Sector de Arranque): Contiene información clave sobre el sistema de archivos, como el tamaño del clúster y la ubicación de la FAT.</li>
+        <li>File Allocation Table (FAT): Es una tabla que registra qué bloques de almacenamiento pertenecen a qué archivos. Funciona como una lista enlazada que permite rastrear la ubicación de los archivos en el disco.</li>
+        <li>Directorio Raíz: Contiene información sobre los archivos y subdirectorios almacenados, incluyendo nombres, atributos y direcciones de inicio en la FAT.</li>
+    </ul>
+
+    <p>Existen tres versiones principales del sistema FAT, cada una con diferentes capacidades y limitaciones, los cuales son:</p>
+
+    <ul>
+        <li>FAT12 (12-bit): Soportando discos de hasta 16 MB y usado en disquetes y sistemas embebidos.</li>
+        <li>FAT16 (16-bit): Soportando discos de hasta 2 GB y fue el estándar en MS-DOS y versiones antiguas de Windows.</li>
+        <li>FAT32 (32-bit): Soportando discos de hasta 2 TB y mejora la eficiencia en la gestión del espacio reduciendo el tamaño del clúster.</li>
+    </ul>
+
+    <p>Las ventajas que nos otorga el sistema FAT son:</p>
+
+    <ul>
+        <li>Simplicidad y bajo uso de recursos.</li>
+        <li>Compatible con la mayoría de sistemas operativos, incluyendo Windows, macOS y Linux.</li>
+        <li>Ideal para dispositivos extraíbles como USB y tarjetas SD.</li>
+
+        <p>En desventajas tenemos que:</p>
+        <li>Falta de características avanzadas como permisos de acceso y journaling.</li>
+        <li>Fragmentación de archivos, lo que reduce la eficiencia.</li>
+        <li>Límite de tamaño de archivos en FAT32 (máximo 4 GB).</li>
+    </ul>
+
+    <p>El sistema FAT sigue siendo relevante hoy en día debido a su compatibilidad y facilidad de uso. Sin embargo, ha sido reemplazado en muchos casos por sistemas más modernos como NTFS y exFAT, que ofrecen mejor seguridad y gestión de almacenamiento.</p>
+
+    <img src="rei6.jpg" alt="Rei">
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+
+</body>
+</html>

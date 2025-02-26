@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style6.css">
 </head>
 <body>
 
-    <h2>Diferentes tipos de dispositivos de E/S</h2>
+    <div id="Container">
+        <header>
+         <h2>Tablas de archivos abiertos y Acceso recurrente: Bloqueo de archivos</h2>
+        </header>
 
     <ul>
         <li>
@@ -17,80 +20,67 @@
     </ul>
 
     <hr>
-    <p>Los dispositivos de entrada y salida son fundamentales en cualquier sistema operativo, ya que permiten la comunicación entre el usuario y el hardware del sistema.</p>
-    <p>Estos dispositivos pueden clasificarse en diferentes categorías según su funcionamiento y características.</p>
+
+    <h3>Tablas de archivos abiertos</h3>
+
+    <p>Las tablas de archivos abiertos son estructuras utilizadas por los sistemas operativos para gestionar y optimizar el acceso a los archivos en uso. Existen dos niveles principales de estas tablas:</p>
+
+    <ul>
+        <p>Tabla de archivos abiertos por proceso:</p>
+         <li>Se mantiene para cada proceso individual.</li>
+         <li>Contiene información sobre los archivos abiertos por ese proceso específico.</li>
+         <li>Incluye un puntero a la tabla global de archivos abiertos.</li>
+        <li>Almacena detalles como el puntero de posición en el archivo y los permisos de acceso.</li>
+    </ul>
+
+    <p>Tabla de archivos abiertos a nivel del sistema:</p>
+
+    <ul>
+        <li>Es una estructura compartida a nivel de sistema operativo.</li>
+        <li>Contiene información sobre todos los archivos abiertos en el sistema.</li>
+        <li>Incluye la ubicación del archivo en el disco, fechas de acceso y tamaño del archivo.</li>
+        <li>Mantiene un contador de cuántos procesos tienen el archivo abierto para saber cuándo puede cerrarse definitivamente.</li>
+    </ul>
+
+    <p>Su funcionamiento se da cuando un proceso abre un archivo, el sistema operativo primero verifica si el archivo ya está en la tabla global. En el caso de que esté, simplemente se agrega una entrada en la tabla del proceso. Si no está, se crea una nueva entrada en la tabla global y luego se vincula a la tabla del proceso.</p>
+    <p>Cuando un proceso cierra un archivo, se elimina su entrada en la tabla de archivos abiertos por proceso. Si ningún otro proceso lo tiene abierto, la entrada en la tabla global también se eliminará.</p>
 
     <hr>
 
-    <h2>Clasificación de los Dispositivos de Entrada y Salida</h2>
+    <h3>Acceso recurrente: Bloqueo de archivos</h3>
 
-    <h3>Dispositivos de Bloque</h3>
-
-    <p>Estos dispositivos son los que manejan los datos en bloques de tamaño fijo y permiten el acceso directo a cualquier bloque sin la necesidad de leerlos en orden secuencial.</p>
-    <p>Siendo los:</p>
+    <p>El bloqueo de archivos es una técnica utilizada en los sistemas operativos para gestionar el acceso concurrente a archivos y prevenir problemas como son la corrupción de datos o condiciones de carrera. Entre ellos existen diferentes tipos de bloqueo, dependiendo de la necesidad del sistema y del nivel de restricción requerido.</p>
 
     <ul>
-        <li>Discos duros (HDD)</li>
-        <li>Unidades de estado sólido (SSD)</li>
-        <li>Unidades de CD/DVD</li>
+        <p>Bloqueo Exclusivo (Exclusive Lock)</p>
+        <li>Solo un proceso puede acceder al archivo.</li>
+        <li>Impide que otros procesos lean o escriban mientras el bloqueo está activo.</li>
+        <li>Se usa en operaciones críticas como actualizaciones de bases de datos.</li>
+
+        <p>Bloqueo Compartido (Shared Lock)</p>
+        <li>Varios procesos pueden leer el archivo simultáneamente.</li>
+        <li>o	Evita la modificación del archivo mientras otros procesos lo esten utilizando en modo lectura.</li>
+
+        <p>Bloqueo Obligatorio (Mandatory Locking)</p>
+        <li>El sistema operativo impide que otros procesos accedan al archivo sin verificar el bloqueo.</li>
+        <li>Se usa en entornos donde la integridad de los datos es crucial.</li>
+
+        <p>Bloqueo Asesor (Advisory Locking)</p>
+        <li>No es forzado por el sistema operativo, sino que depende de que los procesos respeten el esquema de bloqueo.</li>
+        <li>Utilizado en sistemas UNIX, donde los desarrolladores deben programar el control de acceso manualmente.</li>
     </ul>
 
-    <p>En sus características tenemos que estos permiten acceso aleatorio, almacenan grandes volúmenes de datos y que son esenciales para los sistemas de archivos del sistema operativo.​</p>
+    <p>El funcionamiento del Bloqueo de Archivos se da cuando un proceso solicita acceso a un archivo, el sistema operativo verifica si ya hay bloqueos activos. Si en el caso de que el bloqueo solicitado es compatible con los existentes, se concede el acceso. En el caso de que el bloqueo no es compatible, el proceso queda en espera hasta que el bloqueo sea liberado.</p>
 
-    <h3>Dispositivos de Carácter</h3>
-
-    <p>Estos dispositivos son los que transmiten los datos en una secuencia de bytes o caracteres sin agruparlos en bloques fijos.</p>
-    <p>Entrando a esta categoría estan los:</p>
-
-    <ul>
-        <li>Teclados</li>
-        <li>Ratones</li>
-        <li>Impresoras</li>
-        <li>Puertos serie y USB</li>
-    </ul>
-
-    <p>En sus características tenemos que estos tienen la transferencia de datos que ocurre en un flujo continuo y que generalmente requieren que el sistema operativo implemente buffering para mejorar el rendimiento​</p>
-
-    <h3>Dispositivos de Red</h3>
-
-    <p>Estos dispositivos de red facilitan la comunicación entre computadoras y otros dispositivos en una red, entrandando los:</p>
-
-    <ul>
-        <li>Tarjetas de red Ethernet</li>
-        <li>Adaptadores Wi-Fi</li>
-        <li>Módems</li>
-    </ul>
-
-    <p>En las características más importantes estan que utilizan protocolos específicos como el TCP/IP y que pueden operar en modo síncrono o asíncrono dependiendo de la latencia y la velocidad de transferencia.</p>
-
-    <hr>
-
-    <h2>Interacción de los Dispositivos con el Sistema Operativo</h2>
-
-    <h3>Controladores de Dispositivo (Device Drivers)</h3>
     
-    <p>El sistema operativo interactúa con los dispositivos de E/S a través de controladores de dispositivo, que son programas específicos que traducen las instrucciones genéricas del sistema operativo a comandos comprensibles para el hardware.</p>
-
-    <h3>Gestión de Dispositivos por el Kernel</h3>
-
-    <p>El subsistema de E/S dentro del kernel del sistema operativo administra varios aspectos, como lo son:</p>
-
-    <ul>
-        <li>Asignación de dispositivos a procesos.</li>
-        <li>Manejo de interrupciones y errores en dispositivos.</li>
-        <li>Gestión de almacenamiento en caché y buffering para mejorar el rendimiento​.</li>
-    </ul>
-
-    <h3>Métodos de Transferencia de Datos</h3>
-
-    <p>Para poder mejorar la eficiencia en la comunicación entre el procesador y los dispositivos de E/S, el sistema operativo puede utilizar diferentes métodos, como lo son:</p>
-
-    <ul>
-        <li>E/S Programada: La CPU consulta constantemente al dispositivo para saber si está listo para transferir datos.</li>
-        <li>E/S por Interrupciones: El dispositivo envía una señal a la CPU cuando está listo, reduciendo la carga del procesador.</li>
-        <li>Acceso Directo a Memoria (DMA): Permite que los dispositivos transfieran datos directamente a la memoria sin la intervención de la CPU, optimizando el rendimiento​.</li>
-    </ul>
-
     <img src="rei2.jpg" alt="Rei">
+
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
 </body>
 </html>

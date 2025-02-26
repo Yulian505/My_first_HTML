@@ -1,3 +1,87 @@
 body {
     background: rgb(212, 72, 212);
 }
+
+header{
+    background: rgb(211, 51, 99);
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+}
+
+
+hr{
+    color: rgb(36, 35, 36);
+    background-color: rgb(36, 35, 36);
+    height: 2px;
+    border: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+h2 {
+    color: rgb(36, 35, 36);
+    text-align: center;
+    font-size: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+h3{
+    color: rgb(36, 35, 36);
+    text-align: center;
+    font-size: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#Container{
+    width: 70%;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(12, 12, 12);
+}
+
+ul{
+    font-size: 10px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
+
+li{
+    color: rgb(20, 20, 20);
+    font-size: 20px;
+}
+
+p{
+    color: rgb(97, 3, 3);
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+img{
+    width: 20%;
+    height: 10%;
+    border: 2px solid rgb(78, 114, 233);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    box-shadow: 5px 5px 5px rgb(12, 12, 12);
+}

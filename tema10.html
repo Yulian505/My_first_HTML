@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+    <div id="Container">
+        <header>
+            <h2>Sistemas remotos y Andrew File System</h2>
+        </header>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>Sistemas remotos</h3>
+
+    <p>Los sistemas remotos permiten a los usuarios acceder a recursos informáticos situados en otras máquinas a través de una red. Estos sistemas pueden incluir acceso remoto a archivos, ejecución de aplicaciones en servidores y uso compartido de dispositivos. Existen diferentes modelos para gestionar el acceso remoto de manera eficiente y segura.</p>
+
+    <ul>
+        <li>Modelo Cliente-Servidor: Un servidor central proporciona recursos y servicios a múltiples clientes conectados.</li>
+        <li>Modelo Peer-to-Peer (P2P): Todos los nodos pueden actuar como clientes y servidores al mismo tiempo. Se usa en aplicaciones como BitTorrent y Sistemas de Almacenamiento Distribuido.</li>
+        <li>Modelo Híbrido: Siendo una combinación de cliente-servidor y P2P. Se usa en sistemas de almacenamiento en la nube como Google Drive o Dropbox.</li>
+    </ul>
+    
+    <p>En métodos tenemos que el acceso a archivos remotos permite que un usuario acceda a archivos en una máquina remota, usando los métodos o	FTP/SFTP: Transferencia de archivos con autenticación y NFS/CIFS: Montaje de directorios remotos.</p>
+
+    <p>En ejecución de aplicaciones en sistemas remotos estos pueden ejecutar software en un servidor remoto para optimizar recursos, usando los métodos: SSH (Secure Shell): Acceso remoto seguro a terminales UNIX/Linux y Remote Desktop Protocol (RDP): Control remoto de sistemas Windows.</p>
+
+    <p>En servicios en la nube usan plataformas como AWS, Google Cloud y Microsoft Azure  que permiten ejecutar aplicaciones y almacenar datos de forma remota.</p>
+
+    <p>Los sistemas remotos han evolucionado para permitir acceso seguro y eficiente a recursos distribuidos. Tecnologías como NFS, SSH, y los servicios en la nube han mejorado la manera en que interactuamos con sistemas remotos en redes empresariales y personales.</p>
+
+    <hr>
+
+    <h3>Andrew File System</h3>
+
+    <p>El Andrew File System (AFS) es un sistema de archivos distribuido desarrollado en la Universidad Carnegie Mellon con el objetivo de proporcionar un sistema escalable y eficiente para compartir archivos en una red. Fue diseñado para minimizar la carga en los servidores y mejorar el rendimiento del acceso a archivos por parte de los clientes.</p>
+
+    <p>Este modelo de funcionamiento mejora el rendimiento en comparación con sistemas como NFS, ya que reduce la dependencia de conexiones constantes al servidor y optimiza el tráfico en la red.</p>
+    <p>Algunas de sus características principales son:</p>
+
+    <ul>
+        <li>Modelo de Cliente-Servidor: En donde los archivos están almacenados en servidores de archivos dedicados, mientras que los clientes pueden acceder a ellos de manera transparente.</li>
+        <li>Caché en el Cliente: Cuando un cliente accede a un archivo, este se copia en la máquina local y se mantiene en caché. Las modificaciones se envían al servidor solo cuando el archivo es cerrado, reduciendo la cantidad de tráfico en la red y mejorando el rendimiento.</li>
+        <li>Gestión de Consistencia: AFS usa un modelo de sesión en el que los cambios en un archivo solo son visibles para otros usuarios después de que el archivo ha sido cerrado y vuelto a abrir.</li>
+        <li>Escalabilidad: Siendo diseñado para soportar grandes cantidades de clientes con la mínima sobrecarga en el servidor, permitiendo la distribución eficiente de archivos.</li>
+        <li>Seguridad y Control de Acceso: Implementa listas de control de acceso (ACLs) para definir permisos a nivel de directorios.</li>
+        <li>Uso en Redes Universitarias y Corporativas: Ha sido utilizado en entornos académicos y empresariales para compartir datos de manera eficiente.</li>
+    </ul>
+
+    <p>En comparación con otros sistemas de archivos distribuidos como NFS (Network File System), AFS se destaca por su enfoque en la reducción del tráfico de red mediante el uso extensivo de cachés en los clientes.</p>
+
+
+    <img src="rei9.jpg" alt="Rei">
+
+    <hr>
+
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+    </ul>
+</body>
+</html>
