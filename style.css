@@ -73,6 +73,14 @@ img{
     border: 5px solid transparent;
     animation: animarBorde 2s infinite linear;
     padding: 10px;
+
+    transform: translateY(50px); /* Desplazamiento inicial */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+img.mostrar {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 input{
@@ -116,3 +124,20 @@ p{
     margin-bottom: 10%;
 }
 
+video{
+    width: 50%;
+    height: 50%;
+    border: 2px solid rgb(117, 4, 47);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    box-shadow: 5px 5px 5px rgb(12, 12, 12);
+    /*animación*/
+    width: 600px;
+    height: 300px;
+    border: 5px solid transparent;
+    animation: animarBorde 2s infinite linear;
+    padding: 10px;
+}

@@ -35,7 +35,16 @@ img{
     border: 5px solid transparent;
     animation: animarBorde 2s infinite linear;
     padding: 10px;
+
+    transform: translateY(50px); /* Desplazamiento inicial */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+img.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 hr{
     color: rgb(36, 35, 36);
