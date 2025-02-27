@@ -12,6 +12,7 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
+
 h1 {
     color: rgb(36, 35, 36);
     text-align: center;
@@ -98,6 +99,20 @@ input:hover {
     background-color: rgb(150, 150, 150); /* Cambia el color de fondo */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
     box-shadow: 8px 8px 10px rgb(34, 34, 34); /* Aumenta la sombra */
+}
+
+/* Efecto al hacer clic */
+input:active {
+    transform: scale(0.9); /* Hace que el botón se encoja al hacer clic */
+    box-shadow: 3px 3px 5px rgb(34, 34, 34); /* Reduce la sombra */
+    background-color: rgb(180, 180, 180); /* Cambio de color */
+}
+
+/* Animación de destello */
+@keyframes flash {
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
 }
 
 ul{
