@@ -209,5 +209,14 @@ video{
     border: 5px solid transparent;
     animation: animarBorde 2s infinite linear;
     padding: 10px;
+
+    transform: translateY(50px); /* Desplazamiento inicial */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+video.mostrar {
+    opacity: 3;
+    transform: translateY(0);
+}
+
 

@@ -12,6 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
     images.forEach(img => observer.observe(img));
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.querySelectorAll("video");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("mostrar");
+            }
+        });
+    });
+
+    video.forEach(video => observer.observe(video));
+});
+
+
 const button = document.querySelector("input");
 
 button.addEventListener("click", () => {
